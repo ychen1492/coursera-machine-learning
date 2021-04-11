@@ -22,6 +22,12 @@ sigma2 = zeros(n, 1);
 %
 
 
+mu = mu+(1/m)*sum(X)';
+
+for i=1:n
+    delta=X(:,i)-mu(i);
+    sigma2(i) = sigma2(i)+(1/m)*sum(delta.^2);
+end
 
 
 
